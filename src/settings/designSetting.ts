@@ -1,6 +1,6 @@
 import { ThemeEnum } from '../enums/appEnum';
 
-export const prefixCls = 'Map'; // class统一前缀
+export const prefixCls = 'system'; // class统一前缀
 
 export const darkMode = ThemeEnum.LIGHT;
 

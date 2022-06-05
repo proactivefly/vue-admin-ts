@@ -111,7 +111,7 @@ export const useUserStore = defineStore({
       } else {
         const permissionStore = usePermissionStore();
         if (!permissionStore.isDynamicAddedRoute) {
-          console.log('里边', permissionStore.isDynamicAddedRoute);
+          console.log('里边isDynamicAddedRoute', permissionStore.isDynamicAddedRoute);
           // 处理路由
           const routes = await permissionStore.buildRoutesAction();
           routes.forEach((route) => {

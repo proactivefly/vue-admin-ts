@@ -1,7 +1,3 @@
-<!--
- * @Author: Vben
- * @Description: logo component
--->
 <template>
   <div class="anticon" :class="getAppLogoClass" @click="goHome">
     <img src="../../../assets/images/logo.png" />
@@ -63,7 +59,7 @@
   .@{prefix-cls} {
     display: flex;
     align-items: center;
-    padding-left: 7px;
+    padding-left: 10px;
     cursor: pointer;
     transition: all 0.2s ease;
 

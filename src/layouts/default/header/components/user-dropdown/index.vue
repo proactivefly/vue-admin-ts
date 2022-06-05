@@ -12,13 +12,6 @@
     <template #overlay>
       <Menu @click="handleMenuClick">
         <MenuItem
-          key="doc"
-          :text="t('layout.header.dropdownItemDoc')"
-          icon="ion:document-text-outline"
-          v-if="getShowDoc"
-        />
-        <MenuDivider v-if="getShowDoc" />
-        <MenuItem
           v-if="getUseLockPage"
           key="lock"
           :text="t('layout.header.tooltipLock')"
@@ -37,7 +30,6 @@
 <script lang="ts">
   // components
   import { Dropdown, Menu } from 'ant-design-vue';
-
   import { defineComponent, computed } from 'vue';
 
   import { DOC_URL } from '/@/settings/siteSetting';
@@ -62,7 +54,6 @@
       Dropdown,
       Menu,
       MenuItem: createAsyncComponent(() => import('./DropMenuItem.vue')),
-      MenuDivider: Menu.Divider,
       LockAction: createAsyncComponent(() => import('../lock/LockModal.vue')),
     },
     props: {
@@ -71,7 +62,7 @@
     setup() {
       const { prefixCls } = useDesign('header-user-dropdown');
       const { t } = useI18n();
-      const { getShowDoc, getUseLockPage } = useHeaderSetting();
+      const { getUseLockPage } = useHeaderSetting();
       const userStore = useUserStore();
 
       const getUserInfo = computed(() => {
@@ -114,7 +105,6 @@
         t,
         getUserInfo,
         handleMenuClick,
-        getShowDoc,
         register,
         getUseLockPage,
       };

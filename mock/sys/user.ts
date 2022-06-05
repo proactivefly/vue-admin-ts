@@ -1,13 +1,12 @@
 import { MockMethod } from 'vite-plugin-mock';
 import { resultError, resultSuccess, getRequestToken, requestParams } from '../_util';
-
 export function createFakeUserList() {
   return [
     {
       userId: '1',
-      username: 'vben',
-      realName: 'Vben Admin',
-      avatar: 'https://q1.qlogo.cn/g?b=qq&nk=190848757&s=640',
+      username: 'Vue',
+      realName: 'Vue Admin',
+      avatar: 'https://s1.ax1x.com/2022/06/05/Xw3Wwj.jpg',
       desc: 'manager',
       password: '123456',
       token: 'fakeToken1',
@@ -24,7 +23,7 @@ export function createFakeUserList() {
       username: 'test',
       password: '123456',
       realName: 'test user',
-      avatar: 'https://q1.qlogo.cn/g?b=qq&nk=339449197&s=640',
+      avatar: 'https://s1.ax1x.com/2022/06/05/Xw34kn.png',
       desc: 'tester',
       token: 'fakeToken2',
       homePath: '/dashboard/workbench',
