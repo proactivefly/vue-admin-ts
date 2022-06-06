@@ -1,5 +1,11 @@
 <template>
-  <BasicModal v-bind="$attrs" @register="registerModal" :title="getTitle" @ok="handleSubmit">
+  <BasicModal
+    v-bind="$attrs"
+    @register="registerModal"
+    :title="getTitle"
+    @ok="handleSubmit"
+    width="700px"
+  >
     <BasicForm @register="registerForm" />
   </BasicModal>
 </template>
@@ -19,18 +25,24 @@
       const rowId = ref('');
 
       const [registerForm, { setFieldsValue, updateSchema, resetFields, validate }] = useForm({
-        labelWidth: 100,
+        layout: 'horizontal',
+        baseColProps: {
+          span: 12,
+        },
+        labelCol: { span: 6 },
+        wrapperCol: { span: 15 },
         schemas: accountFormSchema,
         showActionButtonGroup: false,
         actionColOptions: {
           span: 23,
         },
       });
-
+      //  注册弹窗
       const [registerModal, { setModalProps, closeModal }] = useModalInner(async (data) => {
+        // console.log('data', data); //{isUpdate: false}
         resetFields();
         setModalProps({ confirmLoading: false });
-        isUpdate.value = !!data?.isUpdate;
+        isUpdate.value = !!data?.isUpdate; //!!强制转换为布尔类型
 
         if (unref(isUpdate)) {
           rowId.value = data.record.id;
@@ -51,7 +63,6 @@
           },
         ]);
       });
-
       const getTitle = computed(() => (!unref(isUpdate) ? '新增账号' : '编辑账号'));
 
       async function handleSubmit() {

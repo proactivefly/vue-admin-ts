@@ -62,6 +62,10 @@ export const searchFormSchema: FormSchema[] = [
     label: '菜单名称',
     component: 'Input',
     colProps: { span: 8 },
+    itemProps: {
+      labelCol: { span: 6 },
+      wrapperCol: { span: 14 },
+    },
   },
   {
     field: 'status',
@@ -74,6 +78,10 @@ export const searchFormSchema: FormSchema[] = [
       ],
     },
     colProps: { span: 8 },
+    itemProps: {
+      labelCol: { span: 4 },
+      wrapperCol: { span: 14 },
+    },
   },
 ];
 
@@ -118,6 +126,7 @@ export const formSchema: FormSchema[] = [
     label: '排序',
     component: 'InputNumber',
     required: true,
+    colProps: { span: 24 },
   },
   {
     field: 'icon',

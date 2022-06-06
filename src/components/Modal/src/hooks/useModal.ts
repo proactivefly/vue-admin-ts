@@ -27,7 +27,7 @@ const dataTransfer = reactive<any>({});
 const visibleData = reactive<{ [key: number]: boolean }>({});
 
 /**
- * @description: Applicable to independent modal and call outside
+ * @description: 适用于独立模态和外部调用
  */
 export function useModal(): UseModalReturnType {
   const modal = ref<Nullable<ModalMethods>>(null);
@@ -101,8 +101,8 @@ export function useModal(): UseModalReturnType {
 }
 
 export const useModalInner = (callbackFn?: Fn): UseModalInnerReturnType => {
-  const modalInstanceRef = ref<Nullable<ModalMethods>>(null);
-  const currentInstance = getCurrentInstance();
+  const modalInstanceRef = ref<Nullable<ModalMethods>>(null); //弹窗组件ref实例
+  const currentInstance = getCurrentInstance(); //获取当前组件实例
   const uidRef = ref<string>('');
 
   const getInstance = () => {
@@ -139,7 +139,7 @@ export const useModalInner = (callbackFn?: Fn): UseModalInnerReturnType => {
         getInstance()?.setModalProps({ loading });
       },
       getVisible: computed((): boolean => {
-        return visibleData[~~unref(uidRef)];
+        return visibleData[~~unref(uidRef)]; //等价于 Math.floor（)
       }),
 
       changeOkLoading: (loading = true) => {

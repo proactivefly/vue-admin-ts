@@ -26,10 +26,12 @@
       const isUpdate = ref(true);
 
       const [registerForm, { resetFields, setFieldsValue, updateSchema, validate }] = useForm({
-        labelWidth: 100,
         schemas: formSchema,
         showActionButtonGroup: false,
-        baseColProps: { lg: 12, md: 24 },
+        // baseColProps: { lg: 24, md: 24 },
+        baseColProps: { span: 24 },
+        labelCol: { span: 4 },
+        wrapperCol: { span: 18 },
       });
 
       const [registerDrawer, { setDrawerProps, closeDrawer }] = useDrawerInner(async (data) => {

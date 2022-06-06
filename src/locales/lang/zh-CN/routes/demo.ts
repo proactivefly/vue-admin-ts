@@ -2,7 +2,6 @@ export default {
   charts: {
     baiduMap: '百度地图',
     aMap: '高德地图',
-    googleMap: '谷歌地图',
     charts: '图表',
     map: '地图',
     line: '折线图',
@@ -111,9 +110,10 @@ export default {
   },
   iframe: {
     frame: '外部页面',
-    antv: 'antVue文档(内嵌)',
+    antv: 'antVue文档',
     doc: '项目文档(内嵌)',
     docExternal: '项目文档(外链)',
+    vue3: 'vue3',
   },
   level: { level: '多级菜单' },
   page: {

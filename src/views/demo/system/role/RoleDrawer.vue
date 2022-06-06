@@ -15,7 +15,7 @@
           :fieldNames="{ title: 'menuName', key: 'id' }"
           checkable
           toolbar
-          title="菜单分配"
+          title="资源分配"
         />
       </template>
     </BasicForm>
@@ -39,7 +39,11 @@
       const treeData = ref<TreeItem[]>([]);
 
       const [registerForm, { resetFields, setFieldsValue, validate }] = useForm({
-        labelWidth: 90,
+        baseColProps: {
+          span: 24,
+        },
+        labelCol: { span: 6 },
+        wrapperCol: { span: 15 },
         schemas: formSchema,
         showActionButtonGroup: false,
       });

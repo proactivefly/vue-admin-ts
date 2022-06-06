@@ -30,9 +30,11 @@ export const basicProps = {
     type: Object as PropType<Recordable>,
     default: null,
   },
+  // 基础行样式
   baseRowStyle: {
     type: Object as PropType<CSSProperties>,
   },
+  // 基础a-col占据24
   baseColProps: {
     type: Object as PropType<Partial<ColEx>>,
   },
@@ -87,7 +89,7 @@ export const basicProps = {
   hideRequiredMark: propTypes.bool,
 
   labelCol: Object as PropType<Partial<ColEx>>,
-
+  //
   layout: propTypes.oneOf(['horizontal', 'vertical', 'inline']).def('horizontal'),
   tableAction: {
     type: Object as PropType<TableActionType>,

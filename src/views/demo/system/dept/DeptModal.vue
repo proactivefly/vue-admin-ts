@@ -18,7 +18,11 @@
       const isUpdate = ref(true);
 
       const [registerForm, { resetFields, setFieldsValue, updateSchema, validate }] = useForm({
-        labelWidth: 100,
+        baseColProps: {
+          span: 24,
+        },
+        labelCol: { span: 6 },
+        wrapperCol: { span: 15 },
         schemas: formSchema,
         showActionButtonGroup: false,
       });

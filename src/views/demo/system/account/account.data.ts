@@ -40,12 +40,20 @@ export const searchFormSchema: FormSchema[] = [
     label: '用户名',
     component: 'Input',
     colProps: { span: 8 },
+    itemProps: {
+      labelCol: { span: 4 },
+      wrapperCol: { span: 15 },
+    },
   },
   {
     field: 'nickname',
     label: '昵称',
     component: 'Input',
     colProps: { span: 8 },
+    itemProps: {
+      labelCol: { span: 4 },
+      wrapperCol: { span: 15 },
+    },
   },
 ];
 
@@ -123,5 +131,10 @@ export const accountFormSchema: FormSchema[] = [
     label: '备注',
     field: 'remark',
     component: 'InputTextArea',
+    colProps: { span: 24 },
+    itemProps: {
+      labelCol: { span: 3 },
+      wrapperCol: { span: 20 },
+    },
   },
 ];

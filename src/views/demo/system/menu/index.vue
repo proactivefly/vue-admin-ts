@@ -47,7 +47,6 @@
         api: getMenuList,
         columns,
         formConfig: {
-          labelWidth: 120,
           schemas: searchFormSchema,
         },
         isTreeTable: true,

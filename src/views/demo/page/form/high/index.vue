@@ -47,6 +47,12 @@
         baseColProps: {
           span: 6,
         },
+        labelCol: {
+          span: 8,
+        },
+        wrapperCol: {
+          span: 15,
+        },
         schemas: taskSchemas,
         showActionButtonGroup: false,
       });

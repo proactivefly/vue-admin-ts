@@ -36,15 +36,12 @@
 </template>
 <script lang="ts">
   import { defineComponent, reactive } from 'vue';
-
   import { BasicTable, useTable, TableAction } from '/@/components/Table';
   import { getAccountList } from '/@/api/demo/system';
   import { PageWrapper } from '/@/components/Page';
   import DeptTree from './DeptTree.vue';
-
   import { useModal } from '/@/components/Modal';
   import AccountModal from './AccountModal.vue';
-
   import { columns, searchFormSchema } from './account.data';
   import { useGo } from '/@/hooks/web/usePage';
 
@@ -54,6 +51,7 @@
     setup() {
       const go = useGo();
       const [registerModal, { openModal }] = useModal();
+
       const searchInfo = reactive<Recordable>({});
       const [registerTable, { reload, updateTableDataRecord }] = useTable({
         title: '账号列表',
@@ -61,7 +59,6 @@
         rowKey: 'id',
         columns,
         formConfig: {
-          labelWidth: 120,
           schemas: searchFormSchema,
           autoSubmitOnEnter: true,
         },
@@ -79,7 +76,6 @@
           slots: { customRender: 'action' },
         },
       });
-
       function handleCreate() {
         openModal(true, {
           isUpdate: false,

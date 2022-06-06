@@ -31,15 +31,6 @@ const charts: AppRouteModule = {
       component: () => import('/@/views/demo/charts/map/Gaode.vue'),
     },
     {
-      path: 'googleMap',
-      name: 'GoogleMap',
-      meta: {
-        title: t('routes.demo.charts.googleMap'),
-      },
-      component: () => import('/@/views/demo/charts/map/Google.vue'),
-    },
-
-    {
       path: 'echarts',
       name: 'Echarts',
       component: getParentLayout('Echarts'),

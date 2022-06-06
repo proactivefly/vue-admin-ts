@@ -2,7 +2,6 @@ export default {
   charts: {
     baiduMap: 'Baidu map',
     aMap: 'A map',
-    googleMap: 'Google map',
     charts: 'Chart',
     map: 'Map',
     line: 'Line',
@@ -115,9 +114,10 @@ export default {
   },
   iframe: {
     frame: 'External',
-    antv: 'antVue doc (embedded)',
+    antv: 'antVue doc',
     doc: 'Project doc (embedded)',
     docExternal: 'Project doc (external)',
+    vue3: 'vue3',
   },
   level: { level: 'MultiMenu' },
   page: {

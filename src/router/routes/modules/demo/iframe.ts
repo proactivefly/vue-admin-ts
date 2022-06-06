@@ -26,20 +26,19 @@ const iframe: AppRouteModule = {
       },
     },
     {
-      path: 'antv',
-      name: 'Antv',
+      path: 'https://2x.antdv.com/docs/vue/introduce-cn/',
+      name: 'AntD-UI',
       component: IFrame,
       meta: {
-        frameSrc: 'https://2x.antdv.com/docs/vue/introduce-cn/',
         title: t('routes.demo.iframe.antv'),
       },
     },
     {
-      path: 'https://vvbin.cn/doc-next/',
-      name: 'DocExternal',
+      path: 'https://v3.cn.vuejs.org/',
+      name: 'vue3',
       component: IFrame,
       meta: {
-        title: t('routes.demo.iframe.docExternal'),
+        title: t('routes.demo.iframe.vue3'),
       },
     },
   ],

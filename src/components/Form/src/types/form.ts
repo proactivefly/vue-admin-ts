@@ -105,7 +105,6 @@ export interface FormProps {
   // Whether to show the operation button
   showActionButtonGroup?: boolean;
 
-  // Reset button configuration
   resetButtonOptions?: Partial<ButtonProps>;
 
   // Confirm button configuration
@@ -124,6 +123,8 @@ export interface FormProps {
   transformDateFunc?: (date: any) => string;
   colon?: boolean;
 }
+
+// Form表单的Schema方式[ˈskiːmə]
 export interface FormSchema {
   // Field name
   field: string;
