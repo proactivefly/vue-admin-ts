@@ -102,7 +102,7 @@ export function createPermissionGuard(router: Router) {
     });
 
     router.addRoute(PAGE_NOT_FOUND_ROUTE as unknown as RouteRecordRaw);
-
+    // 这是不是没用
     permissionStore.setDynamicAddedRoute(true);
 
     if (to.name === PAGE_NOT_FOUND_ROUTE.name) {

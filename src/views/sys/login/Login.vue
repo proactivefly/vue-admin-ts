@@ -69,6 +69,7 @@
 
   const globSetting = useGlobSetting();
   const { prefixCls } = useDesign('login');
+  console.log('prefixCls值为：', prefixCls);
   const { t } = useI18n();
   const localeStore = useLocaleStore();
   const showLocale = localeStore.getShowPicker;

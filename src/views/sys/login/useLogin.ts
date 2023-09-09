@@ -42,7 +42,7 @@ export function useFormValid<T extends Object = any>(formRef: Ref<any>) {
       .catch((err) => {
         console.log('err——————', err);
       });
-    console.log('data', data);
+    console.log('useFormValid返回的data', data);
     return data as T;
   }
 

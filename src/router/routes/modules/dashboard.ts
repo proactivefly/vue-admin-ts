@@ -31,6 +31,14 @@ const dashboard: AppRouteModule = {
         title: t('routes.dashboard.workbench'),
       },
     },
+    {
+      path: 'demo',
+      name: 'MyDemo',
+      component: () => import('/@/views/dashboard/mydemo/index.vue'),
+      meta: {
+        title: t('routes.dashboard.myDemo'),
+      },
+    },
   ],
 };
 

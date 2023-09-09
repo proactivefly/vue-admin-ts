@@ -8,6 +8,7 @@ export interface AppProviderContextProps {
 
 // 创建唯一不重复key
 const key: InjectionKey<AppProviderContextProps> = Symbol();
+console.log('key————', key);
 // 根组件执行创建上下文
 export function createAppProviderContext(context: AppProviderContextProps) {
   return createContext<AppProviderContextProps>(context, key);

@@ -54,6 +54,7 @@ const transform: AxiosTransform = {
     const { code, result, message } = data;
 
     // 这里逻辑可以根据项目进行修改 Reflect https://zhuanlan.zhihu.com/p/92700557
+    // Reflect判断对象中是否有某个属性
     const hasSuccess = data && Reflect.has(data, 'code') && code === ResultEnum.SUCCESS;
     if (hasSuccess) {
       return result;
