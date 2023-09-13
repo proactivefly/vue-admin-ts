@@ -4,4 +4,5 @@ export default {
   workbench: 'Workbench',
   analysis: 'Analysis',
   myDemo: 'myDemo',
+  test: 'Test',
 };

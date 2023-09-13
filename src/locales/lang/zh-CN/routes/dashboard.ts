@@ -4,4 +4,5 @@ export default {
   workbench: '工作台',
   analysis: '分析页',
   myDemo: '我的测试',
+  test: '我的Test',
 };
