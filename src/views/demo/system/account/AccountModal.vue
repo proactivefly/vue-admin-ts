@@ -1,7 +1,7 @@
 <template>
   <BasicModal
-    v-bind="$attrs"
     @register="registerModal"
+    v-bind="$attrs"
     :title="getTitle"
     @ok="handleSubmit"
     width="700px"
@@ -13,6 +13,7 @@
   import { defineComponent, ref, computed, unref } from 'vue';
   import { BasicModal, useModalInner } from '/@/components/Modal';
   import { BasicForm, useForm } from '/@/components/Form/index';
+  // form表单项
   import { accountFormSchema } from './account.data';
   import { getDeptList } from '/@/api/demo/system';
 
@@ -42,9 +43,10 @@
         // console.log('data', data); //{isUpdate: false}
         resetFields();
         setModalProps({ confirmLoading: false });
-        isUpdate.value = !!data?.isUpdate; //!!强制转换为布尔类型
+        isUpdate.value = !!data?.isUpdate; //!!强制转换为布尔类型 炫技
 
         if (unref(isUpdate)) {
+          //如果是更新
           rowId.value = data.record.id;
           setFieldsValue({
             ...data.record,

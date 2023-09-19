@@ -101,9 +101,10 @@ export function useModal(): UseModalReturnType {
 }
 
 export const useModalInner = (callbackFn?: Fn): UseModalInnerReturnType => {
-  const modalInstanceRef = ref<Nullable<ModalMethods>>(null); //弹窗组件ref实例
-  const currentInstance = getCurrentInstance(); //获取当前组件实例
-  const uidRef = ref<string>('');
+  const currentInstance = getCurrentInstance(); //获取当前组件实例包括组件内属性，信息
+
+  const modalInstanceRef = ref<Nullable<ModalMethods>>(null); //弹窗组件实例
+  const uidRef = ref<string>(''); // 组件ref，的id
 
   const getInstance = () => {
     const instance = unref(modalInstanceRef);
@@ -112,7 +113,7 @@ export const useModalInner = (callbackFn?: Fn): UseModalInnerReturnType => {
     }
     return instance;
   };
-
+  /**自己给自己赋值 */
   const register = (modalInstance: ModalMethods, uuid: string) => {
     isProdMode() &&
       tryOnUnmounted(() => {
